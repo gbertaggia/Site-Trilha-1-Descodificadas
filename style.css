@@ -1,0 +1,279 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+body{
+  background-color:rgba(39, 40, 41, 0.958);
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  color:rgb(235, 213, 213)
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto auto;
+  gap: 10px; 
+  width: 100%;
+  height: auto;
+}
+
+header {
+  grid-area: header; 
+  position: relative; 
+  height: 300px; 
+}
+
+header img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  margin: 0;
+  padding: 0;
+}
+
+.header{
+  position: relative; 
+  text-align: center;
+  height: 100%; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.text-header {
+  position: absolute; 
+  color: white;
+  text-align: center; 
+}
+
+.title {
+  font-size: 4rem; 
+  font-family: "Orbitron", sans-serif;
+  margin: 0;
+  text-shadow: 10px 10px 10px rgba(166, 6, 142, 0.791); 
+}
+
+.subtitle {
+  font-size: 1.5rem; 
+  font-family: "Orbitron", sans-serif;
+  margin-top: 1px; 
+  text-shadow: 5px 5px 4px rgba(166, 6, 142, 0.79); 
+}
+
+.instagram-icone{
+  position: absolute; 
+  bottom:20px; 
+  right: 60px; 
+  width: 20px; 
+  height: 20px;
+}
+
+.instagram-icone img {
+  width: 100%;
+  height: auto;  
+  transition: transform 0.3s; 
+}
+
+.instagram-icone img:hover {
+  transform: scale(1.6); 
+}
+
+.logo {
+  position: absolute; 
+  top: 10px; 
+  left: 10px; 
+}
+
+.logo img {
+  width: 75px; 
+  height: auto; 
+}
+
+.menu {
+  margin: 0;
+  padding: 0;  
+  font-family: "Lato", sans-serif;
+}
+
+.menu-item {
+  position: absolute; 
+}
+
+.menu-item > a {
+  display: block;
+  padding: 10px 10px;
+  font-family: "Lato", sans-serif;
+}
+
+.menu-item > a:hover {
+  background-color: rgba(57, 21, 217, 0.869); 
+}
+
+.submenu {
+  display: none; 
+  position: absolute; 
+  top: 100%; 
+  left: 0;
+  background-color: rgba(37, 37, 39, 0.9); 
+  padding: 0;
+  margin: 0;
+  list-style: none; 
+  border-radius: 7px;
+  text-shadow: none;
+}
+
+.submenu li a {
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+.submenu li a:hover {
+  background-color: rgba(8, 47, 155, 0.552); 
+}
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
+.menu-suspenso {
+  position: absolute; 
+  top: 10px;
+  right: 120px;
+}
+
+.menu-suspenso .menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-suspenso .menu-item > a {
+  display: block;
+  padding: 10px 20px;
+  background-color:transparent;
+  color: white;
+  text-decoration:underline;
+}
+
+.menu-horizontal {
+  grid-area: nav;
+  background-color: transparent;
+  display: flex;
+  justify-content:space-around;
+  font-family: "Lato", sans-serif;
+  font-size:larger;
+  padding-top: 30px;
+   
+}
+
+.menu-horizontal a {
+  color: white; /* Cor do texto */
+  text-decoration:underline; 
+  padding: 5px; /* Ajuste o espaçamento para os links */
+}
+
+.menu-horizontal a:hover {
+  color: #060606ab; /* Cor do texto ao passar o mouse */
+}
+
+main {
+  grid-area: main;
+}
+
+h1{
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size:xx-large;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.conteudo-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; 
+  margin-bottom: 20px; 
+  width: 100%;
+  max-width: 1200px; 
+}
+
+.imagens {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.texto-e-imagem {
+  display: flex;
+  flex-direction: column; 
+  gap: 20px; 
+  max-width: 500px; 
+}
+
+.texto {
+  text-align: justify; 
+  line-height: 1.8; 
+  margin-bottom: 20px; 
+}
+
+.conteudo-flex img {
+  width: 100%; 
+  max-width: 600px; 
+  height: auto;
+}
+
+a {
+  color: white;
+  text-decoration:underline; 
+}
+
+a:hover {
+  color: #0c0c0c; 
+}
+
+figure {
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+}
+
+figcaption {
+  font-size: 1rem;
+  color: #d1cbcb; 
+  padding-top: 5px;
+  font-style: italic; 
+  font-family: "Lato" sans-serif;
+  
+}
+
+video {
+  width: 100%;
+  max-width: 840px;
+  height: auto;
+  padding-bottom: 100px;
+}
+
+
+footer p {
+  grid-area: footer;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  color:rgb(33, 246, 246);
+  font-size:medium;
+}
